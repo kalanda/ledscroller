@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Kalanda Led Composer v.0.1 - Animation and Banner generator for ATTinyScroller7x5</title>
+<script language="javascript" type="text/javascript" src="jquery-1.2.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="led-composer-0.1.js"></script>
+<link rel="stylesheet" href="/wp-content/themes/kalanda/screen.css" type="text/css"/>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="page">
+  <div id="header">
+    <div class="bg">
+      <div class="corner-left">
+        <div class="corner-right"> <a href="http://www.kalanda.com"><img src="/wp-content/themes/kalanda/images/logo.gif" alt="Kalanda" /></a></div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div id="content">
+    <div id="layout" class="layout_1_cols">
+      <div class="column_1">
+        <div id="wrapper">
+          <h1>LED Composer v.0.1</h1>
+          <p><strong>This is an Animation and Banner generator for <a href="http://www.kalanda.com/scroller-de-7x5-leds-basado-en-micro-attiny2313.html">Kalanda DIY Led Scroller 7x5</a></strong>. This aplication only generate the animation code, you will need to compile with the rest of the sourcecode, make the hardware and AVR chip programmer.</p>
+          <p>
+            <label>Mode
+            <select name="mode" id="mode">
+              <option value="1" selected="selected">scroll</option>
+              <option value="2">animation</option>
+            </select>
+            </label>
+            <label>Speed (less is faster)
+            <input name="num-speed" type="text" id="num-speed" value="8" size="4" />
+            </label>
+            <label>No. Frames (Up to 270 frames)
+            <input name="num-frames" type="text" id="num-frames" value="3" size="4" />
+            </label> 
+            <input type="button" onclick="init();" value="clear & create new"/>
+          </p>
+          <form method="post" action="">
+            <div id="generator"></div>
+            <div id="editor" style="display:none">
+              <div id="scroller"></div>
+              <div id="code">
+                <label>Code  (copy &amp; paste into file animation.h ):<br />
+                <textarea rows="15" readonly="readonly" id="codeResult"></textarea>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="close">&nbsp;</div>
+    </div>
+  </div>
+  <hr />
+  <div id="footer">
+    <div class="bg">
+      <div class="corner-left">
+        <div class="corner-right">
+          <p> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-94890-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
